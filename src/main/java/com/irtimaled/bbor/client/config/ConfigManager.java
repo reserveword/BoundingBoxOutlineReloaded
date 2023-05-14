@@ -66,6 +66,8 @@ public class ConfigManager {
     public static Setting<Boolean> drawFlowerForests;
     public static Setting<Integer> flowerForestsRenderDistance;
     public static Setting<Boolean> drawBedrockCeilingBlocks;
+    public static Setting<Integer> bedrockCeilingY;
+    public static Setting<Integer> bedrockCeilingBottom;
 
     public static Setting<HexColor> colorWorldSpawn;
     public static Setting<HexColor> colorLazySpawnChunks;
@@ -189,6 +191,8 @@ public class ConfigManager {
         flowerForestsRenderDistance = setup(config, "flowerForests", "flowerForestsRenderDistance", 3, "The distance from the player where flower forests will be drawn.");
 
         drawBedrockCeilingBlocks = setup(config, "bedrockCeiling", "drawBedrockCeilingBlocks", true, "If set to true position with only one layer of bedrock will be drawn.");
+        bedrockCeilingY = setup(config, "bedrockCeiling", "bedrockCeilingY", 127, "The Y value of bedrock ceiling.");
+        bedrockCeilingBottom = setup(config, "bedrockCeiling", "bedrockCeilingBottom", 124, "The Y value of bottom of bedrock ceiling.");
 
 //        drawVillages = setup(config, "structures", "drawVillages", false, "If set to true village bounding boxes will be drawn.");
 //        drawDesertTemples = setup(config, "structures", "drawDesertTemples", true, "If set to true desert temple bounding boxes are drawn.");

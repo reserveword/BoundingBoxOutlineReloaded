@@ -56,7 +56,7 @@ public class BedrockCeilingProvider implements IBoundingBoxProvider<BoundingBoxB
 
         private Coords getCoordsFromBlockState(int x, int z) {
             Coords coords = null;
-            for (int y = 127; y >= 123; y--) {
+            for (int y = ConfigManager.bedrockCeilingY.get(); y >= ConfigManager.bedrockCeilingBottom.get(); y--) {
                 if (BedrockCeilingHelper.isBedrock(x, y, z)) {
                     if (coords == null) {
                         coords = new Coords(x, y, z);
